@@ -7,26 +7,22 @@ public class Task {
     String description;
     Status status;
 
+    //Конструкторы
     public Task() {
         this.status = Status.NEW;
+
     }
     public Task(String name) {
         this();
         this.name = name;
     }
-
     public Task(String name, String description) {
         this(name);
         this.description = description;
     }
-    public Task(String name, String description, Status status) {
+    public Task(String name, int id, String description, Status status) {
         this(name, description);
         this.status = status;
-    }
-
-    public Task(String name, String description, Status status, Integer id) {
-        this(name, description, status);
-        this.id = id;
     }
 
     public Integer getId() {
