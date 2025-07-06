@@ -1,9 +1,10 @@
 package Tasks;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class EpicTask  extends  Task{
-    private ArrayList<SubTask> subtasks = new ArrayList<>();
+    private List<SubTask> subtasks = new ArrayList<>();
 
     public EpicTask(String name) {
         super(name);
@@ -48,7 +49,7 @@ public class EpicTask  extends  Task{
         }
     }
 
-    public ArrayList<SubTask> getSubTasks() {
+    public List<SubTask> getSubTasks() {
         return subtasks;
     }
 }

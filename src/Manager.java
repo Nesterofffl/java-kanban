@@ -3,7 +3,7 @@ import Tasks.Status;
 import Tasks.SubTask;
 import Tasks.Task;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
 
 public class Manager {
@@ -66,7 +66,7 @@ public class Manager {
         subs.put(oldTask.getId(), newTask);
         newTask.setId(oldTask.getId());
     }
-    public ArrayList<SubTask> getSubsForEpic(int id) {
+    public List<SubTask> getSubsForEpic(int id) {
         return epics.get(id).getSubTasks();
     }
 
