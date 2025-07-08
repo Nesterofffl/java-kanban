@@ -1,5 +1,7 @@
 package Tasks;
 
+import java.util.Objects;
+
 public class Task {
 
     Integer id;
@@ -20,7 +22,12 @@ public class Task {
         this(name);
         this.description = description;
     }
-    public Task(String name, int id, String description, Status status) {
+    public Task(String name, String description, Status status, int id) {
+        this(name, description);
+        this.status = status;
+        this.id = id;
+    }
+    public Task(String name, String description, Status status) {
         this(name, description);
         this.status = status;
     }
@@ -65,6 +72,17 @@ public class Task {
                 ", description='" + description + '\'' +
                 ", status=" + status +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Task task)) return false;
+        return Objects.equals(this.id, task.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(this.id);
     }
 }
 

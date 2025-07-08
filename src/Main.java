@@ -1,14 +1,14 @@
+import Managers.Managers;
+import Managers.ITaskManager;
 import Tasks.EpicTask;
 import Tasks.Status;
 import Tasks.SubTask;
 import Tasks.Task;
 
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
-        Manager manager = new Manager();
+        ITaskManager inMemoryTaskManager = Managers.getDefault();
 
         //Пример работы программы
         /*
@@ -22,17 +22,23 @@ public class Main {
         EpicTask task7 = new EpicTask("Сделать курсы");
         SubTask task8 = new SubTask("Пройти теорию", 7);
 
-        manager.addTask(task1);
-        manager.addTask(task2);
-        manager.addTask(task3);
-        manager.addEpicTask(task4);
-        manager.addSubTask(task5);
-        manager.addSubTask(task6);
-        manager.addEpicTask(task7);
-        manager.addSubTask(task8);
+        inMemoryTaskManager.addTask(task1);
+        inMemoryTaskManager.addTask(task2);
+        inMemoryTaskManager.addTask(task3);
+        inMemoryTaskManager.addEpicTask(task4);
+        inMemoryTaskManager.addSubTask(task5);
+        inMemoryTaskManager.addSubTask(task6);
+        inMemoryTaskManager.addEpicTask(task7);
+        inMemoryTaskManager.addSubTask(task8);
+        inMemoryTaskManager.getTask(1);
+        inMemoryTaskManager.getTask(2);
+        inMemoryTaskManager.getTask(3);
+        inMemoryTaskManager.getEpicTask(4);
+        inMemoryTaskManager.getSubTask(5);
+        inMemoryTaskManager.getSubTask(6);
 
-        System.out.println(manager.getAllTasks());
-        System.out.println(manager.getSubsForEpic(4));
+        System.out.println(inMemoryTaskManager.getHistoryManager().getHistory());
+        System.out.println(inMemoryTaskManager.getSubsForEpic(4));
         */
 
         //Cоздание задачи - Task taskName = new Task("Обязательное имя", описание, статус через Status.NEW/IN_PROGRESS/DONE);
