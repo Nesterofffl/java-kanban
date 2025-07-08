@@ -1,8 +1,8 @@
-package Tests;
+package tests;
 
-import Managers.ITaskManager;
-import Managers.Managers;
-import Tasks.Task;
+import managers.ITaskManager;
+import managers.Managers;
+import tasks.Task;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class InMemoryHistoryManagerTest {
 
     @Test
-    public void previousVersionbBeingSavedInHistory() {
+    public void previousVersionBeingSavedInHistory() {
         ITaskManager manager = Managers.getDefault();
 
         Task task = new Task("Тест 1");

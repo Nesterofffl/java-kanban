@@ -1,12 +1,12 @@
-package Managers;
+package managers;
 
-import Tasks.Task;
+import tasks.Task;
 
 import java.util.*;
 
 public class InMemoryHistoryManager implements IHistoryManager {
 
-    private final LinkedList<Task> history = new LinkedList<>();
+    private final List<Task> history = new LinkedList<>();
 
     @Override
     public void add(Task task) {

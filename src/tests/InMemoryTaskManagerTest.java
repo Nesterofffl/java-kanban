@@ -1,10 +1,10 @@
-package Tests;
+package tests;
 
-import Managers.ITaskManager;
-import Managers.Managers;
-import Tasks.Status;
-import Tasks.SubTask;
-import Tasks.Task;
+import managers.ITaskManager;
+import managers.Managers;
+import tasks.Status;
+import tasks.SubTask;
+import tasks.Task;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

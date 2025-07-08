@@ -1,6 +1,6 @@
-package Tests;
+package tests;
 
-import Tasks.SubTask;
+import tasks.SubTask;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

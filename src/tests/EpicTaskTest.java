@@ -1,6 +1,6 @@
-package Tests;
+package tests;
 
-import Tasks.EpicTask;
+import tasks.EpicTask;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
